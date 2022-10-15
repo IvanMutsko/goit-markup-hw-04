@@ -12,6 +12,7 @@
   --dark-background: #2f303a;
   --icon-color: #afb1b8;
   --footer-icon-background: rgba(255, 255, 255, 0.1);
+  --hero-background-color: #c4c4c4;
 }
 
 h1,
@@ -190,7 +191,7 @@ button {
   color: var(--white-text);
 }
 .address-list .link:hover,
-.adress-list .link:focus {
+.address-list .link:focus {
   color: var(--accent-color);
 }
 
@@ -209,12 +210,10 @@ button {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-address-container {
   margin-right: 70px;
-}
-.footer-social-container {
-  margin-top: 12px;
 }
 
 .subscribe {
@@ -227,12 +226,13 @@ button {
 
   margin-bottom: 20px;
 }
-.footer-social-links {
-  display: block;
+.footer-social-list {
+  display: flex;
   gap: 10px;
+  list-style: none;
 }
 
-.footer-social-links .link {
+.footer-social-list .link {
   display: inline-flex;
   width: 44px;
   height: 44px;
@@ -249,7 +249,8 @@ button {
   fill: var(--white-text);
 }
 
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--accent-color);
   fill: var(--white-text);
 }
@@ -257,14 +258,11 @@ button {
 /* ---------------studio (main page)--------------- */
 /* hero */
 .hero {
-  background-color: var(--dark-background);
+  background-color: var(--hero-background-color);
   padding: 0;
-}
-.hero-background {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bg-img.jpg);
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -435,8 +433,11 @@ button {
 }
 
 .comand-socials {
-  display: block;
+  display: flex;
   text-align: center;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
 }
 
 .comand-socials-link {
@@ -531,10 +532,7 @@ button {
 .project-list .item {
   flex-basis: calc((100% - 60px) / 3);
 }
-.project-list .item:hover,
-.project-list .item:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
 .project-list .link {
   text-decoration: none;
   color: inherit;
@@ -557,4 +555,9 @@ button {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+.project-list .link:hover,
+.project-list .link:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
